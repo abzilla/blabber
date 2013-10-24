@@ -6,5 +6,17 @@ class CreateFriendships < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    reversible do |dir|
+      dir.up do
+        execute <<-SQL  
+          ALTER TABLE posts
+          ADD CONSTRAINT fk_user_constraint
+          FOREIGN KEY (friendship_id)
+          REFERENCES friendships(id)
+        SQL
+      end
+    end
+
   end
 end
