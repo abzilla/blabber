@@ -1,0 +1,10 @@
+<h1>Meet Blabber.</h1>
+<h1>The Best Social Network Since Friendster!</h1>
+
+<% if ! logged_in? %>
+	<%= link_to "Create an Account", new_user_path %><br>
+
+	<%= link_to "Sign in to your account", new_session_path %><br>
+<% else %>
+	<%= link_to "Go to your page!", user_path( current_user ) %><br>
+<% end %>
