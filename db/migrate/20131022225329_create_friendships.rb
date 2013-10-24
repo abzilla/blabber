@@ -11,7 +11,7 @@ class CreateFriendships < ActiveRecord::Migration
       dir.up do
         execute <<-SQL  
           ALTER TABLE posts
-          ADD CONSTRAINT fk_user_constraint
+          ADD CONSTRAINT fk_friendship_constraint
           FOREIGN KEY (friendship_id)
           REFERENCES friendships(id)
         SQL
