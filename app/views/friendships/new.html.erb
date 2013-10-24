@@ -1,13 +1,15 @@
-<h3>Add new friends:</h3>
-
+<h2>Add New Friends:</h2>
 
 <% @users.each do |user| %>
-  
-  <% if user.username != current_user.username %> 
-	<li><%= h user.username %> </li>
-    <li><%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %> </li>
-
-    <% end %>
+  <ul>
+  <% if user.name != current_user.name %> 
+		<li><%= user.name %> <%= button_to "Add friend", action: "create", friend_id: user.id %></li>
+  <% end %>
+	</ul>
 <% end %> 
 
-</ul>
+<%= debug @user %>
+<%= debug @friend %>
+<%= debug params %>
+<%= debug session.to_hash %>
+

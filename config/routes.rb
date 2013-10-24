@@ -1,9 +1,10 @@
 Blabber::Application.routes.draw do
   resources :posts, only: [:index, :create, :show, :new]
   
-  resources :friendships, only: [:index, :show]
-
-  resources :users
+  
+  resources :users do
+		resources :friendships, only: [:index, :show, :new, :create]
+  end
 
   resource :session, only: [:new, :create, :destroy]
 
