@@ -24,4 +24,9 @@ class FriendshipsController < ApplicationController
     @users = User.all
   end
 
+  def index
+    user = current_user
+    @users_friends = user.get_friends_list
+  end
+
 end

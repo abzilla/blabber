@@ -1,3 +1,7 @@
-<h2>All Friends</h2>
+<h2>All Your Friends</h2>
 
-# spits out all friends
+<ul>
+  <% @users_friends.each do |user| %>
+    <li><%= user.name %></li>
+  <% end %>
+</ul>
