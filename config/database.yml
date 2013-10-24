@@ -49,7 +49,7 @@ test:
   encoding: unicode
   database: blabber_test
   pool: 5
-  username: blabbe
+  username:
   password:
 
 production:
@@ -57,5 +57,5 @@ production:
   encoding: unicode
   database: blabber_production
   pool: 5
-  username: blabber
+  username: 
   password:
