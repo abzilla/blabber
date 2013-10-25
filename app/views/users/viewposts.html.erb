@@ -2,5 +2,6 @@
 <ul>
   <% @posts.each do |post| %>
     <li><%= post[0] %>: <%= post[1].message %></li>
+  	<li>Posted <%= time_ago_in_words(post.created_at) %> ago</li>
   <% end %>
 </ul>

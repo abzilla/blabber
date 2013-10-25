@@ -4,20 +4,19 @@ Scope: Make trending topics tweets stream in real-time.
 
 User stories:
 
-1.) A user signs in through @twit_bit_app so they can see the tweets.
+1.) A user signs in to the @twit_bit_app Twitter account so they can see trending topics streaming tweets.
 
 Obstacles:
 1.) Couldn't figure out the Oauth stuff for the Twitter. The damn thing died.
 
 10/22/13
 
-Scope: New project. Make a twitter clone for GA. Call it Blabber.
+Scope: New project. Make a social network for GA. Call it Blabber.
 
 User stories:
 1.) A user can create an account.
 2.) A user can sign in to the website.
 3.) A user can sign out of the website.
-
 
 Obstacles: 
 
@@ -43,7 +42,8 @@ Scope: Build out features so that users can add friends and send messages to the
 
 1.) User can find other users by name since email addresses can be obscure.
 2.) A user can see if they're signed in or not.
-3.) User creates a new account, and sees "User X has created a new account."
+3.) A user can add friends. 
+4.) A user can send posts to other friends.
 
 
 
