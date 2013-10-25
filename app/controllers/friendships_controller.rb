@@ -3,7 +3,7 @@ class FriendshipsController < ApplicationController
     @friendship = current_user.friendships.build(:friend_id => params[:friend_id])
 
     if @friendship.save
-      flash[:notice] = "Added friend."
+      flash[:notice] = "Added friend!"
       redirect_to root_url
     else
       flash[:error] = "Error occurred when adding friend."
@@ -27,6 +27,7 @@ class FriendshipsController < ApplicationController
   def index
     user = current_user
     @users_friends = user.get_friends_list
+    @friendships = user.friendships
   end
 
 end

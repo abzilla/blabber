@@ -46,6 +46,24 @@ class UsersController < ApplicationController
     end
   end
 
+  def viewposts
+    @posts = Post.all
+    @posts = @posts.map do |post|
+      friendship = Friendship.find(post.friendship_id)
+      return_variable = [User.find(friendship.user_id).name, post]
+      return_variable
+    end
+
+    #binding.pry
+    @posts = @posts.select do |name_post|
+      friendship = Friendship.find(name_post[1].friendship_id)
+      return (current_user.id == friendship.friend_id)
+    end
+
+    render :viewposts
+  end
+
+
   private
 
   def user_params

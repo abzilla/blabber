@@ -4,14 +4,14 @@ class PostsController < ApplicationController
   end
  
   def create
-    @post = Post.create(post_params)
+    @post = Post.create(message: post_params[:message], friendship_id: params[:friendship_id])
     respond_to do |format|
       if @post.save
-        format.html { redirect_to posts_path }
+        format.html { redirect_to user_path(params[:user_id]) }
         format.js
       else
         flash[:notice] = "Message failed to save."
-        format.html { redirect_to posts_path }
+        format.html { redirect_to root_path }
       end
     end
   end
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:message)
+    params.require(:post).permit(:message )
   end
 
 end

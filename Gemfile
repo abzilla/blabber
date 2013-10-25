@@ -46,5 +46,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'pry-rails', group: [:development, :test]
 gem 'rails_12factor', group: :production
+gem 'better_errors', group: :development
+gem "binding_of_caller", group: :development
 
 ruby "2.0.0"
